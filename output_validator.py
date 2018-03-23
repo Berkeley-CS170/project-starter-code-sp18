@@ -50,7 +50,7 @@ def tests(input_data, output_data, params=[]):
     if not kingdom_tour[0] == kingdom_tour[-1]:
         print('Your tour does not start and end at the same kingdom')
 
-    list_of_edges_in_tour = utils.tour_to_list_of_edges(kingdom_tour)
+    list_of_edges_in_tour = tour_to_list_of_edges(kingdom_tour)
     kingdom_name_to_index = lambda name : list_of_kingdom_names.index(name)
     edges_in_tour_by_index = map(lambda edge : (kingdom_name_to_index(edge[0]), kingdom_name_to_index(edge[1])), list_of_edges_in_tour)
     if not all(adjacency_matrix[edge[0]][edge[1]] for edge in edges_in_tour_by_index):
