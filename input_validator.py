@@ -7,7 +7,7 @@ import argparse
 import utils
 import networkx as nx
 import numpy as np
-from utils_sp18 import *
+# from utils_sp18 import *
 from student_utils_sp18 import *
 # import planarity
 
