@@ -40,13 +40,9 @@ def adjacency_matrix_to_graph(adjacency_matrix):
 
 
 def is_metric(G):
-    for i in G.nodes:
-        for j in G.nodes:
-            for k in G.nodes:
-                if i != j and j != k and i != k and G.has_edge(i, j) and G.has_edge(j, k) and G.has_edge(k, i):
-                    assert G.edges[i, j]['weight'] + G.edges[j, k]['weight'] > G.edges[k, i]['weight']
-                    assert G.edges[j, k]['weight'] + G.edges[k, i]['weight'] > G.edges[i, j]['weight']
-                    assert G.edges[k, i]['weight'] + G.edges[i, j]['weight'] > G.edges[j, k]['weight']
+    shortest = dict(nx.floyd_warshall(G))
+    for u, v, datadict in G.edges(data=True):
+        assert shortest[u][v] == datadict['weight'], 'Direct path from {} to {} (weight {}) is not shortest path (weight {})'.format(u, v, datadict['weight'], shortest[u][v])
     return True
 
 
