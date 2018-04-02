@@ -1,0 +1,340 @@
+% cs70.sty - style file for CS 70 lecture notes
+
+\usepackage{amsmath,amsthm,textcomp,paralist, color}
+
+\def\coursenumber{CS 170}
+\def\class{Efficient Algorithms and Intractable Problems}
+\def\semester{Spring 2018}
+\def\instructor{A. Chiesa and U. Vazirani \hspace{2 cm} Version 1}
+
+%% The lecture number is set using e.g. \lecture{6} in the file header
+%% \lecturenumber should be used in all sections, theorems, equations, etc.
+
+\newcount\lecturenumber
+\def\lecture#1{\global\lecturenumber=#1}
+
+
+
+%\def\endproofmark{$\Box$}
+%\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark}
+%\newenvironment{proofof}{\par{\bf Proof }}{\endproofmark}
+
+
+%\newcounter{axiomnumber}
+%\setcounter{axiomnumber}{0}
+%\renewcommand\theaxiomnumber{\the\lecturenumber.\arabic{axiomnumber}}
+%\newenvironment{axiom}[1]{\par\refstepcounter{axiomnumber}
+%{\bf Axiom \theaxiomnumber\ (#1)}:
+%\begingroup}%
+%{\endgroup}
+%
+%\newcounter{defnnumber}
+%\setcounter{defnnumber}{0}
+%\renewcommand\thedefnnumber{\the\lecturenumber.\arabic{defnnumber}}
+%\newenvironment{defn}[1]{\par\refstepcounter{defnnumber}
+%{\bf Definition \thedefnnumber\ (#1)}:
+%\begingroup}%
+%{\endgroup}
+
+
+
+
+%\newcounter{theoremnumber}
+%\setcounter{theoremnumber}{0}
+%\renewcommand\thetheoremnumber{\the\lecturenumber.\arabic{theoremnumber}}
+%\newenvironment{theorem}{\par\refstepcounter{theoremnumber}
+%{\bf Theorem \thetheoremnumber}:
+%\begingroup}%
+%{\endgroup}
+
+%\newcounter{lemmanumber}
+%\setcounter{lemmanumber}{0}
+%\renewcommand\thelemmanumber{\the\lecturenumber.\arabic{lemmanumber}}
+%\newenvironment{lemma}{\par\refstepcounter{lemmanumber}
+%{\bf Lemma \thelemmanumber}:
+%\begingroup}%
+%{\endgroup}
+
+%\newenvironment{corollary}{\par\refstepcounter{theoremnumber}
+%{\bf Corollary \thetheoremnumber}:
+%\begingroup}%
+%{\endgroup}
+
+
+\newskip\saveskip
+\newskip\saveindent
+\saveskip=\baselineskip
+
+%macros for use in assignments and exams
+\def\q#1#2{{\bf\item (#1 pts.)\quad #2}}
+\def\qns#1{{\bf\item #1}}
+\def\tf{{\it True/false}: }
+%\def\mp{{\it Multiple choice}: }
+
+\def\tab{\hbox{\kern10pt}}
+
+\newcommand{\define}[1]{\emph{#1}}
+
+\textheight=9in
+\textwidth=6.5in
+\addtolength{\voffset}{-1in}   %%% Required when using pdflatex on Mac
+%\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=-0.25in
+\parindent=0pt
+\parskip=5pt
+\itemsep=-1pt
+\floatsep 9pt plus 2pt minus 3pt
+\intextsep 9pt plus 2pt minus 3pt
+\textfloatsep=9pt plus 2pt minus 3pt
+\renewcommand{\baselinestretch}{1.0}
+\font\dunhd=cmdunh10 scaled \magstep5
+\font\dunhc=cmdunh10 scaled \magstep4
+\font\dunhb=cmdunh10 scaled \magstep3
+\font\dunha=cmdunh10 scaled \magstep2
+\date{}
+
+\def\maketitle{%
+ \begingroup
+ \newpage
+ \global\@topnum\z@ \@maketitle
+ \thispagestyle{myheadings}
+ \endgroup
+ \setcounter{footnote}{0}
+ \let\maketitle\relax
+ \let\@maketitle\relax}
+\def\@maketitle{\newpage
+\hrule height6pt \vskip .7em
+\makebox[1.5in][l]{\dunhb \coursenumber}
+{\dunhb \class \hfill \ }
+\vskip0.01in
+\makebox[1.5in][l]{\dunhb \semester}
+{\dunhb \instructor \hfill \dunhb \title \par}
+\vskip 0.6em
+\hrule height6pt
+ \par
+ \vskip .5em}
+\def\section{\@startsection {section}{1}{\z@}{-3.0ex plus -.6ex minus
+    -.2ex}{1.3ex plus .1ex}{\dunhb}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-1.6ex plus -.5ex minus
+   -.1ex}{0.9ex plus .1ex}{\dunha}}
+
+%%%%%% page headings
+
+\def\oddfoottext{\begin{footnotesize}\coursenumber, \semester \hfill\qquad\thepage\end{footnotesize}}
+\def\evenfoottext{\begin{footnotesize}\thepage \hfill\qquad\coursenumber, \semester\end{footnotesize}}
+
+
+\def\ps@myheadings{\let\@mkboth\@gobbletwo
+\def\@oddfoot{\oddfoottext}%
+\def\@evenfoot{\evenfoottext}%
+\def\@evenhead{}\def\@oddhead{}}
+
+\pagestyle{myheadings}
+
+%%%%%% Figures
+
+\def\fig#1{\centerline{\epsffile{#1}}}
+\def\twofig#1#2{%
+\noindent\epsfxsize=0.48\textwidth
+\noindent \epsffile{#1}\hfill
+\epsfxsize=0.48\textwidth
+\epsffile{#2}\\
+\makebox[0.48\textwidth]{(a)}\hfill\makebox[0.48\textwidth]{(b)}%
+}
+
+
+%%%%%% cross references
+\newcommand{\chapref}[1]{Chapter~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\exref}[1]{Exercise~\ref{#1}}
+%\newcommand{\eqref}[1]{Equation~(\ref{#1})}
+\newcommand{\partref}[1]{Part~\ref{#1}}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
+\newcommand{\sideref}[1]{the sidebar titled #1}
+\newcommand{\pgref}[1]{page~\pageref{#1}}
+
+%%%%%% additional symbols or names for them
+
+%\newcommand{\implies}{\:\;{\Rightarrow}\:\;}
+\newcommand{\impliessymbol}{\Rightarrow}
+\newcommand{\entails}{\models}
+\newcommand{\lequiv}{\;\;{\Leftrightarrow}\;\;}
+\newcommand{\lequivsymbol}{\Leftrightarrow}
+\newcommand{\xor}{\not\lequiv}
+\newcommand{\All}[1]{\forall\,#1\;\;}
+\newcommand{\Exi}[1]{\exists\,#1\;\;}
+\newcommand{\Exii}[1]{\exists!\,#1\;\;}% -pnorvig
+\newcommand{\Iot}[2]{\iota\,#1\,#2}
+\newcommand{\Lam}[2]{\lambda #1\;#2}
+\newcommand{\Qua}[3]{[#1\,#2\;#3]}
+
+\def\<{\langle}
+\def\>{\rangle}
+
+\newcommand{\union}{{\,{\cup}\,}}
+\newcommand{\elt}{{\,{\in}\,}}  %%%cuts down on spacing
+\newcommand{\eq}{{\,{=}\,}}     %%%cuts down on spacing
+\def\stimes{{\,\times\,}}       %%%cuts down on spacing
+
+\def\ceil#1{\lceil #1 \rceil}
+\def\floor#1{\lfloor #1 \rfloor}
+
+%\def\cents{\mbox{c}}
+%\AtBeginDocument{\def\cents{\hbox{\rm\rlap{\hspace{.07ex}$/$}c}}}
+\newcommand{\cents}{\text{\textcent{}}}
+\def\cons{{}\bullet{}}
+
+%%%%%% Sev's commands
+\newcommand{\snote}[1]{\textcolor{red}{ {\textbf{(Sev: }#1\textbf{) }}}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\lra}{\Longrightarrow}
+\newcommand{\set}[1]{{\left\{#1\right\}}}    % braces for set notation
+\newcommand{\sanity}[1]{
+\vspace{5mm}
+\hrule
+\emph{Sanity check!} #1\vspace{2mm}
+\hrule
+\vspace{5mm}
+}
+\newcommand{\life}[1]{
+\vspace{5mm}
+\hrule
+\emph{Life lesson.} #1\vspace{2mm}
+\hrule
+\vspace{5mm}
+}
+\newcommand{\exercise}[1]{
+\vspace{5mm}
+\hrule
+\emph{Exercise.} #1\vspace{2mm}
+\hrule
+\vspace{5mm}
+}
+
+%%%%%% bold font in math mode; this sucks but is simplest for now
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\smbf}[1]{\mbox{{\scriptsize\bfseries #1}}}
+
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\X{\mbf{X}}
+\def\x{\mbf{x}}
+\def\sx{\smbf{x}}
+\def\Y{\mbf{Y}}
+\def\y{\mbf{y}}
+\def\sy{\smbf{y}}
+\def\E{\mbf{E}}
+\def\e{\mbf{e}}
+\def\T{\mbf{T}}
+\def\O{\textrm{O}}  % repeated below because it gets redefined by some package?
+\def\Q{\mathbb{Q}}
+\def\se{\smbf{e}}
+\def\Z{\mathbb{Z}}
+\def\z{\mbf{z}}
+\def\sz{\smbf{z}}
+\def\F{\mathbb{F}}
+\def\f{\mbf{f}}
+\def\A{\mbf{A}}
+\def\P{\mbf{P}}
+\def\B{\mbf{B}}
+\def\b{\mbf{b}}
+\def\m{\mbf{m}}
+\def\I{\mbf{I}}
+\def\ones{\mbf{1}}
+\def\ev{\mbf{ev}}
+\def\fv{\mbf{ev}}
+\def\sv{\mbf{sv}}
+\def\e{\mathop{\mathrm{e}}\nolimits}  % for e = 2.718...
+
+\def\third{{\textstyle{1\over 3}}}
+\def\half{{\textstyle{1\over 2}}}
+\def\quarter{{\textstyle{1\over 4}}}
+\def\VarOmega{\mathchar"10A }
+\def\Ex#1{{\mathbb E}(#1)}
+\def\Var#1{{\rm Var}(#1)}
+\def\Aset{{\cal A}}
+\def\Bset{{\cal B}}
+
+\def\Bin{\text{Bin}}
+\def\Geom{\text{Geom}}
+\def\Poiss{\text{Poiss}}
+\def\Exp{\text{Exp}}
+\def\Norm{N}
+
+\newcommand{\mymod}{\textup{mod}}
+
+%%%%%% for notes (either in margin or not to appear at all)
+%\newcommand{\comment}[1]{\marginpar{\scriptsize #1}}
+%\newcommand{\comment}[1]{}
+\newcommand{\secondedition}[1]{}
+
+\reversemarginpar %% puts into left margin
+
+%%%%%% special keywords are marked in the margin
+%% Can be turned off if desired
+
+\newlength{\marginlineskip}
+\newlength{\marginwidth}
+\setlength{\marginlineskip}{3.5pt}
+\setlength{\marginwidth}{\marginparwidth}
+\addtolength{\marginwidth}{\marginparsep}
+
+\newlength{\savelineskip}
+\newcommand{\term}[1]{{\bfseries #1}}% maybe put into index,glossary too?
+\newcommand{\newterm}[1]{%
+{\bfseries #1}%
+\marginalnote{#1}}% maybe put into index,glossary too?
+
+\newcommand{\marginalnote}[1]{\yesmarginalnote{#1}}
+
+\newcommand{\yesmarginalnote}[1]{%
+\setlength{\savelineskip}{\baselineskip}%
+\marginpar{%
+\raisebox{0pt}[0pt][0pt]{\parbox[c]{\marginparwidth}{\begin{flushleft} {\nt \uppercase{#1}}%
+\setlength{\baselineskip}{\marginlineskip}%
+\end{flushleft}}}}% % end marginpar
+\setlength{\baselineskip}{\savelineskip}%
+}
+
+\newcommand{\nomarginalnote}[1]{}  %%% [[check this - seems wrong]]
+
+\font\nt=phvrrn scaled 625 %% margin notes
+
+%\usepackage{times,latexsym,mathptmx,comment}
+\usepackage{times,latexsym,mathptmx,comment,latexsym,epsf,amssymb,graphicx,url,amsmath,amsfonts,textcomp}
+\graphicspath{{figures/}}
+
+\usepackage[T1]{fontenc} % to get proper curly braces with \tt
+
+\def\mdw@dots#1{\ensuremath{\mathpalette\mdw@dots@i{#1}}}
+\def\mdw@dots@i#1#2{%
+  \setbox\z@\hbox{$#1\mskip1.8mu$}%
+  \dimen@\wd\z@%
+  \setbox\z@\hbox{$#1.$}%
+  #2%
+}
+\def\Ddots{%
+  \mdw@dots{\mathinner{%
+    \mkern1mu%
+    \raise\dimen@\vbox{\kern7\dimen@\copy\z@}%
+    \mkern2mu%
+    \raise4\dimen@\copy\z@%
+    \mkern2mu%
+    \raise7\dimen@\box\z@%
+    \mkern1mu%
+  }}%
+}
+
+\newcounter{sparectr}
+\newenvironment{qunlist}{\begin{list}{{\bf\arabic{sparectr}.}}%
+                                       {\usecounter{sparectr}
+                                        \setlength{\leftmargin}{0pt}}}%
+                          {\end{list}}
+\newcommand{\answer}{\smallskip\textbf{Answer:} }
+\newcommand{\noanswer}{}
+\newcommand{\answerp}[1]{\smallskip\textbf{Answer:} (#1 pts.)}
+
+\def\O{\textrm{O}}  % repeated here because it gets redefined by some package?
