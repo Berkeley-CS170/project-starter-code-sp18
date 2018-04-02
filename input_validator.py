@@ -41,8 +41,8 @@ def tests(input_file, params=[]):
     if not len(adjacency_matrix) == len(adjacency_matrix[0]) == number_of_kingdoms:
         print(f'The dimensions of your adjacency matrix ({len(adjacency_matrix)} x {len(adjacency_matrix[0])}) do not match the number of kingdoms you provided ({number_of_kingdoms})')
 
-    if not all(entry == 'x' or (type(entry) is float and entry >= 0 and entry <= 2e9 and decimal_digits_check(entry)) for row in adjacency_matrix for entry in row):
-        print(f'Your adjacency matrix may only contain the character "x", or nonnegative integers less than 2e+9, or nonnegative floats with less than 5 decimal digits')
+    if not all(entry == 'x' or (type(entry) is float and entry > 0 and entry <= 2e9 and decimal_digits_check(entry)) for row in adjacency_matrix for entry in row):
+        print(f'Your adjacency matrix may only contain the character "x", or strictly positive integers less than 2e+9, or strictly positive floats with less than 5 decimal digits')
     
     if not len(set(list_of_kingdom_names)) == len(list_of_kingdom_names):
         print('Your kingdom names are not distinct')
