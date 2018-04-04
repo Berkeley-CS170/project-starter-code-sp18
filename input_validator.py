@@ -11,7 +11,7 @@ import numpy as np
 from student_utils_sp18 import *
 # import planarity
 
-RANGE_OF_INPUT_SIZES = range(100)
+RANGE_OF_INPUT_SIZES = range(201)
 MAX_NAME_LENGTH = 20
 
 
