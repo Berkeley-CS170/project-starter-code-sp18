@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 
 random.seed(3)
 
+MAX_DECIMALS = 5
 
 def decimal_digits_check(number):
     number = str(number)
@@ -13,7 +14,7 @@ def decimal_digits_check(number):
     if len(parts) == 1:
         return True
     else:
-        return len(parts[1]) <= 5
+        return len(parts[1]) <= MAX_DECIMALS
 
 
 def data_parser(input_data):
@@ -40,9 +41,16 @@ def adjacency_matrix_to_graph(adjacency_matrix):
 
 
 def is_metric(G):
-    shortest = dict(nx.floyd_warshall(G))
-    for u, v, datadict in G.edges(data=True):
-        assert shortest[u][v] == datadict['weight'], 'Direct path from {} to {} (weight {}) is not shortest path (weight {})'.format(u, v, datadict['weight'], shortest[u][v])
+    # Create integer G by multipling every edge weight by `mult`.
+    mult = 10 ** MAX_DECIMALS
+    G_int = G.copy()
+    for u, v, datadict in G_int.edges(data=True):
+        datadict['weight'] = int(round(datadict['weight'] * mult))
+    
+    shortest = dict(nx.floyd_warshall(G_int))
+    for u, v, datadict in G_int.edges(data=True):
+        assert shortest[u][v] == datadict['weight'], 'Direct path from {} to {} (weight {}) is not shortest path (weight {})'.format(
+                u, v, datadict['weight'] / mult, shortest[u][v] / mult)
     return True
 
 
