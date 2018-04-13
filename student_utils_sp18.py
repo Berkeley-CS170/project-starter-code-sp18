@@ -77,7 +77,10 @@ def cost_of_solution(G, closed_walk, conquered_set):
         message += 'It is not true that every kingdom is either conquered, or adjacent to a conquered kingdom\n'
         cost = 'infinite'
     if cost != 'infinite':
-        closed_walk_edges = get_edges_from_path(closed_walk[:-1]) + [(closed_walk[-2], closed_walk[-1])]
+        if len(closed_walk) == 1:
+            closed_walk_edges = []
+        else:
+            closed_walk_edges = get_edges_from_path(closed_walk[:-1]) + [(closed_walk[-2], closed_walk[-1])]
         conquering_cost = sum([G.nodes[v]['weight'] for v in conquered_set])
         travelling_cost = sum([G.edges[e]['weight'] for e in closed_walk_edges])
         cost = conquering_cost + travelling_cost
