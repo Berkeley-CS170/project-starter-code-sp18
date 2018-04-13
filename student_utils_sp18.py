@@ -34,6 +34,7 @@ def adjacency_matrix_to_graph(adjacency_matrix):
     G = nx.convert_matrix.from_numpy_matrix(np.matrix(adjacency_matrix_formatted))
     
     for node, datadict in G.nodes.items():
+        assert node_weights[node] != 'x', 'The conquering cost of node number {} was specified to be x. Conquering costs cannot be x.'.format(node)
         datadict['weight'] = node_weights[node]
     
     return G
