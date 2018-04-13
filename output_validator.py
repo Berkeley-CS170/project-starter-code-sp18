@@ -58,6 +58,9 @@ def tests(input_data, output_data, params=[]):
     kingdom_tour = convert_kingdom_names_to_indices(kingdom_tour, list_of_kingdom_names)
     conquered_kingdoms = convert_kingdom_names_to_indices(conquered_kingdoms, list_of_kingdom_names)
 
+    if (kingdom_tour[0] != kingdom_tour[-1]):
+        message += "Your tour must start and end at the same kingdom"
+
     cost, solution_message = cost_of_solution(G, kingdom_tour, conquered_kingdoms)
     message += solution_message
 
