@@ -60,7 +60,7 @@ def is_valid_walk(G, closed_walk):
 
 
 def get_edges_from_path(path):
-    return [(path[i], path[i+1]) for i in range(len(path) - 1)] + [(path[-1], path[0])]
+    return [(path[i], path[i+1]) for i in range(len(path) - 1)]
 
 
 def cost_of_solution(G, closed_walk, conquered_set):
