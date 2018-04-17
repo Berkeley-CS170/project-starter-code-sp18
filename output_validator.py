@@ -48,18 +48,30 @@ def tests(input_data, output_data, params=[]):
     kingdom_tour = output_data[0]
     conquered_kingdoms = output_data[1]
     message = ''
+    cost = -1
 
     if not all([kingdom in list_of_kingdom_names for kingdom in kingdom_tour]):
         message += 'At least one name in your tour is not in the list of kingdom names\n'
+        cost = 'infinite'
+
+    if (kingdom_tour[0] != starting_kingdom):
+        message += "Your tour must start at the specified starting kingdom\n"
+        cost = 'infinite'
 
     if not all([kingdom in kingdom_tour for kingdom in conquered_kingdoms]):
         message += 'At least one name in your conquered set does not belong to the tour\n'
+        cost = 'infinite'
 
     kingdom_tour = convert_kingdom_names_to_indices(kingdom_tour, list_of_kingdom_names)
     conquered_kingdoms = convert_kingdom_names_to_indices(conquered_kingdoms, list_of_kingdom_names)
 
-    cost, solution_message = cost_of_solution(G, kingdom_tour, conquered_kingdoms)
-    message += solution_message
+    if (kingdom_tour[0] != kingdom_tour[-1]):
+        message += "Your tour must start and end at the same kingdom\n"
+        cost = 'infinite'
+    
+    if cost != 'infinite':
+        cost, solution_message = cost_of_solution(G, kingdom_tour, conquered_kingdoms)
+        message += solution_message
 
     return cost, message
 
