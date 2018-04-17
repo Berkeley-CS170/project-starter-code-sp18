@@ -1,0 +1,14 @@
+11
+A B C D E F G H I J K
+A
+50 50 50 x x x x x x x 90
+50 60 80 x x 75 x x x x x
+50 80 60 75 x x x x x x x
+x x 75 400 75 x x x x x x
+x x x 75 600 x x x x x 55
+x 75 x x x 400 75 x x x x
+x x x x x 75 600 x x x 55
+x x x x x x x 50 x x 55
+x x x x x x x x 50 x 55
+x x x x x x x x x 50 55
+90 x x x 55 x 55 55 55 55 200

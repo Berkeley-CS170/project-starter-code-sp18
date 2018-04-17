@@ -1,0 +1,33 @@
+30
+a b c d e f g h i j k l m n o p q r s t u v w x y z aa ab ac ad
+a
+1000 1 x x x 1 x x x x x x x x x x x x x x x x x x x x x x x x
+1 1000 1 1 1 x x x x x x x x x x x x x x x x x x x x x x x x x
+x 1 1 x x x x x x 1 x x x x x x x x x x x x x x x x x x x x
+x 1 x 1 x x x x x x x x x x x x x x x x x x x x x x x x x x
+x 1 x x 1 x x x x x x x x x x x x x x x x x x x x x x x x x
+1 x x x x 1 1000 1000 1000 x x x x x x x x x x x x x x x x x x x x x
+x x x x x 1000 1000 1000 x x x x x x x x x x x x x x x x x x x x x x
+x x x x x 1000 1000 1000 x x x x x x x x x x x x x x x x x x x x x x
+x x x x x 1000 x x 1000 x x x x x x x x x x x x x x x x x x x x x
+x x 1 x x x x x x 1 1 x x x x x x x x x x x x x x x x x x x
+x x x x x x x x x 1 10000 1000 500 500 1000 x x x x x 1 x x x x x x x x x
+x x x x x x x x x x 1000 999 x x x x x x x x x x x x x x x x x x
+x x x x x x x x x x 500 x 2500 x x x x x x x x x x x x x x x x x
+x x x x x x x x x x 500 x x 2500 x x x x x x x x x x x x x x x x
+x x x x x x x x x x 1000 x x x 999 1 1 x x x x x x x x x x x x x
+x x x x x x x x x x x x x x 1 1 x 1 x x x x x x x x x x x x
+x x x x x x x x x x x x x x 1 x 1 x 1 x x x x x x x x x x x
+x x x x x x x x x x x x x x x 1 x 5000 x x x x x x x x x x x x
+x x x x x x x x x x x x x x x x 1 x 5000 1 x x x x x x x x x x
+x x x x x x x x x x x x x x x x x x 1 5000 x x x x x x x x x x
+x x x x x x x x x x 1 x x x x x x x x x 1 1 x 1000 1 x x x x x
+x x x x x x x x x x x x x x x x x x x x 1 1 1000 x 1 x x x x x
+x x x x x x x x x x x x x x x x x x x x x 1000 1 x x x x x x x
+x x x x x x x x x x x x x x x x x x x x 1000 x x 1 x x x x x x
+x x x x x x x x x x x x x x x x x x x x 1 1 x x 3 1 1 1 1 1
+x x x x x x x x x x x x x x x x x x x x x x x x 1 1000 x x x x
+x x x x x x x x x x x x x x x x x x x x x x x x 1 x 1000 x x x
+x x x x x x x x x x x x x x x x x x x x x x x x 1 x x 1000 x x
+x x x x x x x x x x x x x x x x x x x x x x x x 1 x x x 1 1
+x x x x x x x x x x x x x x x x x x x x x x x x 1 x x x 1 1

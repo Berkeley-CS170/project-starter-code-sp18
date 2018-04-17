@@ -1,0 +1,35 @@
+32
+L1 L2 L3 L4 L5 L6 L7 L8 L9 L10 L11 L12 C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20
+L1
+1.0 2.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+2.0 2.0 1.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x x x
+x 1.0 58.0 12.0 x x x x x x x x 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 x x x x x x x x x x
+x x 12.0 28.0 13.0 x x x x x x x x x x x x x x x x x x x x x x x x x x x
+x x x 13.0 1.0 2.0 x x x x x x x x x x x x x x x x x x x x x x x x x x
+x x x x 2.0 1.0 2.0 x x x x x x x x x x x x x x x x x x x x x x x x x
+x x x x x 2.0 1.0 2.0 x x x x x x x x x x x x x x x x x x x x x x x x
+x x x x x x 2.0 1.0 2.0 x x x x x x x x x x x x x x x x x x x x x x x
+x x x x x x x 2.0 3.0 1.0 x x x x x x x x x x x x x x x x x x x x x x
+x x x x x x x x 1.0 58.0 12.0 x x x x x x x x x x x 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+x x x x x x x x x 12.0 28.0 12.0 x x x x x x x x x x x x x x x x x x x x
+x x x x x x x x x x 12.0 2.0 x x x x x x x x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x 4.0 x x x x x x x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x 4.0 x x x x x x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x 4.0 x x x x x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x x 4.0 x x x x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x x x 4.0 x x x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x x x x 4.0 x x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x x x x x 3.0 x x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x x x x x x 3.0 x x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x x x x x x x 3.0 x x x x x x x x x x x
+x x 1.0 x x x x x x x x x x x x x x x x x x 3.0 x x x x x x x x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x 4.0 x x x x x x x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x 4.0 x x x x x x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x 3.0 x x x x x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x x 3.0 x x x x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x x x 3.0 x x x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x x x x 4.0 x x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x x x x x 4.0 x x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x x x x x x 4.0 x x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x x x x x x x 4.0 x
+x x x x x x x x x 1.0 x x x x x x x x x x x x x x x x x x x x x 4.0

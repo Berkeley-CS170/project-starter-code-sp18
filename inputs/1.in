@@ -1,0 +1,29 @@
+26
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+l
+1 9 x x x x x x x x x x x x x x x x x x x x x x x x
+9 9 7 x x x x x x x x x x x x x x x x x x x x x x x
+x 7 1 6 x x x x x x x x x x x x x x x x x x x x x x
+x x 6 1 6 x x x x x x x x x x x x x x x x x x x x x
+x x x 6 20 6 x x x x x x x x x x x x x x x x x x x x
+x x x x 6 1 4 x x x x x x x x x x x x x x x x x x x
+x x x x x 4 1 2 x x x x x x x x x x x x x x x x x x
+x x x x x x 2 10 5 x x x x x x x x x x x x x x x x x
+x x x x x x x 5 1 1 x x x x x x x x x x x x x x x x
+x x x x x x x x 1 4 2 x x x x x x x x x x x x x x x
+x x x x x x x x x 2 3 4 x x x x x x x x x x x x x x
+x x x x x x x x x x 4 2 4 x x x x x x x x x x x x x
+x x x x x x x x x x x 4 30 2 x x x x x x x x x x x x
+x x x x x x x x x x x x 2 1 8 x x x x x x x x x x x
+x x x x x x x x x x x x x 8 10 5 x x x x x x x x x x
+x x x x x x x x x x x x x x 5 15 2 x x x x x x x x x
+x x x x x x x x x x x x x x x 2 3 2 x x x x x x x x
+x x x x x x x x x x x x x x x x 2 10 2 x x x x x x x
+x x x x x x x x x x x x x x x x x 2 2 4 x x x x x x
+x x x x x x x x x x x x x x x x x x 4 2 10 x x x x x
+x x x x x x x x x x x x x x x x x x x 10 40 1 x x x x
+x x x x x x x x x x x x x x x x x x x x 1 1 9 x x x
+x x x x x x x x x x x x x x x x x x x x x 9 4 3 x x
+x x x x x x x x x x x x x x x x x x x x x x 3 20 2 x
+x x x x x x x x x x x x x x x x x x x x x x x 2 10 2
+x x x x x x x x x x x x x x x x x x x x x x x x 2 19

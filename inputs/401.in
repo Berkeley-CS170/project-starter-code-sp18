@@ -1,0 +1,14 @@
+11
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11
+s1
+50 1.73 2 1.73 x x x x x x x
+1.73 50 1 x 0.5 x x x x x x
+2 1 50 1 1 1 1 1 1 1 1
+1.73 x 1 50 x x x x x x 0.5
+x 0.5 1 x 50 0.5 x x x x x
+x x 1 x 0.5 50 0.5 x x x x
+x x 1 x x 0.5 50 0.5 x x x
+x x 1 x x x 0.5 50 0.5 x x
+x x 1 x x x x 0.5 50 0.5 x
+x x 1 x x x x x 0.5 50 0.5
+x x 1 0.5 x x x x x 0.5 50

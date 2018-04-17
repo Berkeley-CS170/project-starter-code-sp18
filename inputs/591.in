@@ -1,0 +1,12 @@
+9
+a b c d e f g h i
+a
+100 1 x x 1 x x x x
+1 100 1 x x x x 1 x
+x 1 100 x x x 3000 x x
+x x x 100 1 x 3000 x x
+1 x x 1 100 1 x x x
+x x x x 1 100 3000 x x
+x x 3000 3000 x 3000 5 3000 x
+x 1 x x x x 3000 100 1
+x x x x x x x 1 100
